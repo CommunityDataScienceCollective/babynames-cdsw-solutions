@@ -7,16 +7,21 @@ import ssadata
 
 boysNamesSubsets = 0
 for boysName in ssadata.boys.keys():
+    match = False
     for otherBoysName in ssadata.boys.keys():
-        if boysName in otherBoysName and otherBoysName != boysName:
+        if not match and boysName in otherBoysName and otherBoysName != boysName:
             boysNamesSubsets = boysNamesSubsets + 1
+            match = True
+
+print(str(boysNamesSubsets) + " boys names are subsets of other boys names.")
 
 girlsNamesSubsets = 0
 for girlsName in ssadata.girls.keys():
+    match = False
     for otherGirlsName in ssadata.girls.keys():
-        if girlsName in otherGirlsName and otherGirlsName != girlsName:
+        if not match and girlsName in otherGirlsName and otherGirlsName != girlsName:
             girlsNamesSubsets = girlsNamesSubsets + 1
+            match = True
 
-print(str(boysNamesSubsets) + " boys names are subsets of other boys names.")
 print(str(girlsNamesSubsets) + " girls names are subsets of other girls names.")
 
