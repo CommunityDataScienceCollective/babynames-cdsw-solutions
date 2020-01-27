@@ -1,4 +1,4 @@
-NAMES_LIST = "yob2013.txt"
+NAMES_LIST = "yob2018.txt"
 
 boys = {}
 girls = {}
